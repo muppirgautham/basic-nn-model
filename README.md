@@ -10,7 +10,7 @@ Explain the problem statement
 
 ## Neural Network Model
 
-Include the neural network model diagram.
+![image](https://github.com/muppirgautham/basic-nn-model/assets/94810884/020b6a5b-967b-4351-9833-1b2d6e87b89a)
 
 ## DESIGN STEPS
 
@@ -92,48 +92,49 @@ Scaler = MinMaxScaler()
 Scaler.fit(X_train)
 
 X_train1 = Scaler.transform(X_train)
-model = Sequential([
-                    Dense(6,activation = 'relu'),
-                    Dense(6,activation = 'relu'),
-                    Dense(1)
-                    ])
-model.compile(optimizer = 'rmsprop', loss = 'mse')
-model.fit(X_train1,y_train,epochs = 2000)
-
-loss_df = pd.DataFrame(model.history.history)
+ex1_model = Sequential([
+    Dense(units = 3, activation = 'relu', input_shape=[1]),
+    Dense(units = 2, activation = 'relu'),
+    Dense(units = 1)
+    ])
+ex1_model.compile(optimizer = 'rmsprop', loss = 'mse')
+ex1_model.fit(X_train1,y_train,epochs = 5000)
+ex1_model.summary()
+loss_df = pd.DataFrame(ex1_model.history.history)
 
 loss_df.plot()
 
 X_test1 = Scaler.transform(X_test)
 
-model.evaluate(X_test1,y_test)
+ex1_model.evaluate(X_test1,y_test)
 
 X_n1 = [[30]]
 
 X_n1_1 = Scaler.transform(X_n1)
 
-model.predict(X_n1_1)
+ex1_model.predict(X_n1_1)
 
 ```
 ## Dataset Information
 
-![image](https://github.com/muppirgautham/basic-nn-model/assets/94810884/0a0dc5aa-1f1f-4ef3-9c64-cc0167143e46)
-
+![image](https://github.com/muppirgautham/basic-nn-model/assets/94810884/b85f615f-8757-4678-ac8f-93e3a4546fe6)
 
 ## OUTPUT
 
 ### Training Loss Vs Iteration Plot
 
-Include your plot here
+![image](https://github.com/muppirgautham/basic-nn-model/assets/94810884/275e985c-4971-48cc-93e7-6fa26e6fc183)
 
 ### Test Data Root Mean Squared Error
+![image](https://github.com/muppirgautham/basic-nn-model/assets/94810884/0f875435-c0e8-4ccf-917f-d7922647e06b)
 
-Find the test data root mean squared error
 
 ### New Sample Data Prediction
+![image](https://github.com/muppirgautham/basic-nn-model/assets/94810884/c9763ba6-0c23-47ad-abc2-c89e8298fcae)
 
-Include your sample input and output here
 
 ## RESULT
 
-Include your result here
+Thus, The Process of developing a neural network regression model for the created dataset is successfully executed.
+
+
