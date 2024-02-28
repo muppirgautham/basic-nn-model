@@ -6,7 +6,13 @@ To develop a neural network regression model for the given dataset.
 
 ## THEORY
 
-Explain the problem statement
+Creating a neural network regression model involves designing a computational architecture that learns relationships within data to make continuous predictions. Through iterative training, the model adjusts its parameters to minimize prediction errors and optimize performance. This approach utilizes neural networks, composed of interconnected layers of neurons, to effectively capture complex patterns in input-output relationships for regression tasks, facilitating accurate and generalized predictions in various domains such as finance, healthcare, and engineering.
+```
+Input layer: 1 neuron.
+First hidden layer: 3 neurons with ReLU activation function.
+Second hidden layer: 2 neurons with ReLU activation function.
+Output layer: 1 neuron.
+```
 
 ## Neural Network Model
 
